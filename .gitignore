@@ -1,0 +1,6 @@
+udemy_venv/
+venv/
+.venv/
+.idea/
+__pycache__/
+.env
