@@ -1,0 +1,9 @@
+front-end/
+.venv/
+venv/
+*.pyc
+__pycache__/
+instance/
+udemy_venv/
+env/
+.env

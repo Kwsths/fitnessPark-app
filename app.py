@@ -7,8 +7,10 @@ from db import db
 from blacklist import BLACKLIST
 import os
 import models # will call from init of module all models
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins=['http://localhost:3000'], supports_credentials=True)
 
 app.config["PROPAGATE_EXCEPTIONS"] = True
 app.config["API_TITLE"] = "Fitness Park Rest Api"
