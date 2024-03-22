@@ -34,7 +34,7 @@ const Users = () => {
   };
 
   const handleShopClick = (id) => {
-    navigate(`/users/${id}`);
+    navigate(`/athletes/${id}`);
   };
 
   const handleLogout = () => {

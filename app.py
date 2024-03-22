@@ -12,7 +12,11 @@ from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, origins=['http://localhost:3000'], supports_credentials=True)
+    remote_origin = os.getenv("REMOTE_ORIGIN")
+    origins = ['http://localhost:3000']
+    if remote_origin:
+        origins.append(remote_origin)
+    CORS(app, origins=origins, supports_credentials=True)
 
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = "Fitness Park Rest Api"

@@ -12,7 +12,7 @@ const Home = () => {
       </div>
 
       <div className="nav-links">
-        <Link to="/users">Users</Link>
+        <Link to="/athletes">Users</Link>
         {auth.isLoggedIn ? (
           <span
             style={{ cursor: "pointer", color: "#007bff" }}
@@ -25,7 +25,7 @@ const Home = () => {
             Logout
           </span>
         ) : (
-          <Link to="/login">Login</Link>
+          <Link to="/signin">Login</Link>
         )}
       </div>
     </div>

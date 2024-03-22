@@ -13,11 +13,11 @@ export default function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/signin" element={<LoginPage />} />
+        <Route path="/signup" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route
-          path="/users"
+          path="/athletes"
           element={
             <PrivateRoute>
               <Users />
@@ -25,7 +25,7 @@ export default function App() {
           }
         />
         <Route
-          path="/users/:userId"
+          path="/athletes/:userId"
           element={
             <PrivateRoute>
               <Products />
